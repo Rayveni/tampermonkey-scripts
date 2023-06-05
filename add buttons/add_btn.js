@@ -53,7 +53,7 @@ function heart_beat(_f) {
     }
   }, _interval);
 
-  // остановить вывод через 5 секунд
+  //stop loop if success
   setTimeout(() => {
     clearInterval(timerId);
   }, _timeout);
@@ -120,7 +120,6 @@ function parce_input_fields() {
         _type = 'dropdown';
       }
     } catch (e) {
-      // инструкции для обработки ошибок
       let parent_n = item.parentNode.parentNode.parentNode.parentNode;
       _key = parent_n.querySelectorAll('.tsft-datepicker-label')[0].textContent;
       _value = item.querySelectorAll('input')[0].value;
